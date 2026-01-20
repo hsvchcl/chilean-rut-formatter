@@ -42,7 +42,7 @@
         "type": "git",
         "url": "https://github.com/hsvchcl/chilean-rut-formatter.git"
     },
-    "homepage": "https://github.com/hsvchcl/chilean-rut-formatter#readme",
+    "homepage": "https://hsvchcl.github.io/chilean-rut-formatter",
     "engines": {
         "node": ">=16"
     }

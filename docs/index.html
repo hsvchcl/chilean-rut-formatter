@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Librería TypeScript de alto rendimiento para formatear y validar RUTs chilenos. Zero dependencies, tree-shakeable, con protección DoS.">
+    <meta name="keywords" content="RUT, Chile, validación, formateo, TypeScript, npm, librería">
+    <meta name="author" content="hsvchcl">
+    
+    <title>Chilean RUT Formatter - Validación y Formateo de RUTs</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇱</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="flag">🇨🇱</span>
+                <span class="brand-text">chilean-rut-formatter</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#api">API</a>
+                <a href="https://github.com/hsvchcl/chilean-rut-formatter" target="_blank" class="github-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <div class="badge">v1.0.1 • MIT License</div>
+            <h1>Valida y formatea <span class="gradient-text">RUTs chilenos</span> en segundos</h1>
+            <p class="hero-description">
+                Librería TypeScript de alto rendimiento. Zero dependencies, tree-shakeable, con protección DoS integrada.
+            </p>
+            
+            <div class="install-box">
+                <code>npm install chilean-rut-formatter</code>
+                <button class="copy-btn" data-copy="npm install chilean-rut-formatter" aria-label="Copiar comando">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                </button>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">Probar Demo</a>
+                <a href="https://www.npmjs.com/package/chilean-rut-formatter" target="_blank" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0v24h24V0H0zm19.2 19.2H4.8V4.8h14.4v14.4z"/></svg>
+                    Ver en npm
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Características</h2>
+            <p class="section-subtitle">Todo lo que necesitas para trabajar con RUTs chilenos</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Validación</h3>
+                    <p>Algoritmo Módulo 11 oficial para validar RUTs correctamente</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Alto Rendimiento</h3>
+                    <p>Regex pre-compilados, early returns y mínimas allocations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Zero Dependencies</h3>
+                    <p>Sin dependencias externas. Ligero y rápido</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Seguro</h3>
+                    <p>Sanitización de input y protección contra DoS</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>TypeScript</h3>
+                    <p>Tipos incluidos para autocompletado y type safety</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌳</div>
+                    <h3>Tree-shakeable</h3>
+                    <p>Soporte ESM y CJS. Importa solo lo que necesitas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Demo Interactivo</h2>
+            <p class="section-subtitle">Prueba la librería en tiempo real</p>
+            
+            <div class="demo-container">
+                <div class="demo-input-group">
+                    <label for="rut-input">Ingresa un RUT</label>
+                    <input 
+                        type="text" 
+                        id="rut-input" 
+                        placeholder="Ej: 12345678-5" 
+                        maxlength="15"
+                        autocomplete="off"
+                    >
+                </div>
+                
+                <div class="demo-results">
+                    <div class="result-card">
+                        <span class="result-label">Validación</span>
+                        <span id="validation-result" class="result-value">-</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">Formateado</span>
+                        <span id="formatted-result" class="result-value">-</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">Limpio</span>
+                        <span id="clean-result" class="result-value">-</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">Dígito Verificador</span>
+                        <span id="dv-result" class="result-value">-</span>
+                    </div>
+                </div>
+                
+                <div class="demo-examples">
+                    <span>Ejemplos:</span>
+                    <button class="example-btn" data-rut="12.345.678-5">12.345.678-5</button>
+                    <button class="example-btn" data-rut="16612277-K">16612277-K</button>
+                    <button class="example-btn" data-rut="11111111-1">11111111-1</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section id="code" class="code-section">
+        <div class="container">
+            <h2 class="section-title">Ejemplos de Código</h2>
+            <p class="section-subtitle">Fácil de usar en cualquier proyecto</p>
+            
+            <div class="code-tabs">
+                <button class="code-tab active" data-tab="validate">Validar</button>
+                <button class="code-tab" data-tab="format">Formatear</button>
+                <button class="code-tab" data-tab="realtime">Tiempo Real</button>
+            </div>
+            
+            <div class="code-panels">
+                <div class="code-panel active" id="panel-validate">
+                    <pre><code><span class="keyword">import</span> { validateRut, isValidRut } <span class="keyword">from</span> <span class="string">'chilean-rut-formatter'</span>;
+
+<span class="comment">// Validación completa con detalles</span>
+<span class="keyword">const</span> result = <span class="function">validateRut</span>(<span class="string">'12.345.678-5'</span>);
+<span class="comment">// { isValid: true, rut: '123456785' }</span>
+
+<span class="keyword">const</span> invalid = <span class="function">validateRut</span>(<span class="string">'12345678-0'</span>);
+<span class="comment">// { isValid: false, error: 'Invalid verification digit' }</span>
+
+<span class="comment">// Verificación booleana simple</span>
+<span class="function">isValidRut</span>(<span class="string">'12.345.678-5'</span>); <span class="comment">// true</span>
+<span class="function">isValidRut</span>(<span class="string">'12345678-0'</span>);   <span class="comment">// false</span></code></pre>
+                </div>
+                
+                <div class="code-panel" id="panel-format">
+                    <pre><code><span class="keyword">import</span> { formatRut } <span class="keyword">from</span> <span class="string">'chilean-rut-formatter'</span>;
+
+<span class="comment">// Por defecto: con puntos y guión</span>
+<span class="function">formatRut</span>(<span class="string">'123456785'</span>);         <span class="comment">// '12.345.678-5'</span>
+<span class="function">formatRut</span>(<span class="string">'12345678K'</span>);         <span class="comment">// '12.345.678-K'</span>
+
+<span class="comment">// Opciones personalizadas</span>
+<span class="function">formatRut</span>(<span class="string">'123456785'</span>, { dots: <span class="keyword">false</span> });       <span class="comment">// '12345678-5'</span>
+<span class="function">formatRut</span>(<span class="string">'123456785'</span>, { dash: <span class="keyword">false</span> });       <span class="comment">// '12.345.6785'</span>
+<span class="function">formatRut</span>(<span class="string">'12345678K'</span>, { uppercase: <span class="keyword">false</span> });  <span class="comment">// '12.345.678-k'</span></code></pre>
+                </div>
+                
+                <div class="code-panel" id="panel-realtime">
+                    <pre><code><span class="keyword">import</span> { formatRutPartial } <span class="keyword">from</span> <span class="string">'chilean-rut-formatter'</span>;
+
+<span class="comment">// Perfecto para formateo mientras el usuario escribe</span>
+<span class="function">formatRutPartial</span>(<span class="string">'1'</span>);         <span class="comment">// '1'</span>
+<span class="function">formatRutPartial</span>(<span class="string">'12'</span>);        <span class="comment">// '1-2'</span>
+<span class="function">formatRutPartial</span>(<span class="string">'12345'</span>);     <span class="comment">// '1.234-5'</span>
+<span class="function">formatRutPartial</span>(<span class="string">'123456789'</span>); <span class="comment">// '12.345.678-9'</span>
+
+<span class="comment">// Uso en React</span>
+<span class="keyword">const</span> handleChange = (e) => {
+  <span class="keyword">const</span> formatted = <span class="function">formatRutPartial</span>(e.target.value);
+  <span class="function">setRut</span>(formatted);
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Reference Section -->
+    <section id="api" class="api-section">
+        <div class="container">
+            <h2 class="section-title">API Reference</h2>
+            <p class="section-subtitle">Todas las funciones disponibles</p>
+            
+            <div class="api-table-wrapper">
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th>Descripción</th>
+                            <th>Retorna</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>validateRut(rut)</code></td>
+                            <td>Valida un RUT y retorna detalles</td>
+                            <td><code>{ isValid, rut?, error? }</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>isValidRut(rut)</code></td>
+                            <td>Verificación booleana simple</td>
+                            <td><code>boolean</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>formatRut(rut, options?)</code></td>
+                            <td>Formatea un RUT válido</td>
+                            <td><code>string</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>formatRutPartial(rut, options?)</code></td>
+                            <td>Formateo en tiempo real</td>
+                            <td><code>string</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>cleanRut(input)</code></td>
+                            <td>Limpia caracteres no válidos</td>
+                            <td><code>string</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>calculateVerificationDigit(body)</code></td>
+                            <td>Calcula el dígito verificador</td>
+                            <td><code>string</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="flag">🇨🇱</span>
+                    <span>chilean-rut-formatter</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.npmjs.com/package/chilean-rut-formatter" target="_blank">npm</a>
+                    <a href="https://github.com/hsvchcl/chilean-rut-formatter" target="_blank">GitHub</a>
+                    <a href="https://github.com/hsvchcl/chilean-rut-formatter/blob/main/LICENSE" target="_blank">MIT License</a>
+                </div>
+            </div>
+            <p class="footer-copy">
+                Hecho con ❤️ en Chile
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/chilean-rut-formatter@1.0.1/dist/index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
