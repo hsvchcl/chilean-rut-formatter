@@ -53,6 +53,31 @@ git checkout main
 - El Action se dispara automáticamente cuando se hace push de un tag `v*`
 - Si publicas manualmente, el Action fallará con error 403 porque la versión ya existe
 
+## 🔄 OBLIGATORIO: Sincronización de Ramas
+
+> [!CAUTION]
+> **NUNCA olvides sincronizar `main` y `develop` después de cada release.**
+> Ambas ramas SIEMPRE deben estar en el mismo commit después de un release.
+
+Después de cada release, SIEMPRE ejecuta:
+```bash
+# Si estás en main, sincroniza develop:
+git checkout develop
+git merge main
+git push origin develop
+
+# Si estás en develop, sincroniza main:
+git checkout main
+git merge develop
+git push origin main
+```
+
+Verifica que estén sincronizadas:
+```bash
+git log --oneline -1 main && git log --oneline -1 develop
+# Ambas deben mostrar el mismo commit hash
+```
+
 ## Verificación
 
 Después del push, verifica en:
