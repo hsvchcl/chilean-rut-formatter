@@ -1,6 +1,6 @@
 {
     "name": "chilean-rut-formatter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "High-performance library for formatting and validating Chilean RUTs (Rol Único Tributario)",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
