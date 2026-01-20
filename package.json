@@ -1,0 +1,48 @@
+{
+    "name": "chilean-rut-formatter",
+    "version": "1.0.0",
+    "description": "High-performance library for formatting and validating Chilean RUTs (Rol Único Tributario)",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "lint": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "rut",
+        "chile",
+        "chilean",
+        "rut-validator",
+        "rut-formatter",
+        "tax-id",
+        "validation"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "tsup": "^8.0.0",
+        "typescript": "^5.3.0",
+        "vitest": "^1.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/chilean-rut-formatter"
+    },
+    "engines": {
+        "node": ">=16"
+    }
+}
