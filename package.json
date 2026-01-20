@@ -40,8 +40,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-username/chilean-rut-formatter"
+        "url": "https://github.com/hsvchcl/chilean-rut-formatter.git"
     },
+    "homepage": "https://github.com/hsvchcl/chilean-rut-formatter#readme",
     "engines": {
         "node": ">=16"
     }
